@@ -9,6 +9,7 @@ namespace probabildiadCalculadorCarros
     internal class CarrosManager
     {
         static Random random = new();
+        static int c1 = 0, c2 = 0, c3 = 0, c4 = 0, c5 = 0, c6 = 0;
 
         static List<Carro> carros2016 = new List<Carro>();
         static List<Carro> carros2017 = new List<Carro>();
@@ -63,7 +64,7 @@ namespace probabildiadCalculadorCarros
         public static void SeleccionarCarrosPorDefecto()
         {
             int a16 = random.Next(0, 41); //Aquí se cambia el número de carros 2/2
-            int a17 = random.Next(0, 52);
+            int a17 = random.Next(0, 51);
             int a18 = random.Next(0, 136);
             int a19 = random.Next(0, 57);
             int a20 = random.Next(0, 150);
@@ -90,38 +91,62 @@ namespace probabildiadCalculadorCarros
             int candidato = random.Next(1, 7);
             int carroSeleccionado;
 
+
             switch (candidato)
             {
                 case 1:
-                    carroSeleccionado = random.Next(0, Carros2016.Count); //Se genera el índice del número de carro a selecc.
-                    carrosSeleccionados.Add(Carros2016[carroSeleccionado]); //Se añade el índice del carro
-                    Carros2016.RemoveAt(carroSeleccionado); //Se borra
+                    if (c1 < 1)
+                    {
+                        carroSeleccionado = random.Next(0, Carros2016.Count); //Se genera el índice del número de carro a selecc.
+                        carrosSeleccionados.Add(Carros2016[carroSeleccionado]); //Se añade el índice del carro
+                        Carros2016.RemoveAt(carroSeleccionado); //Se borra
+                        c1++;
+                    }
                     break;
-
                 case 2:
-                    carroSeleccionado = random.Next(0, Carros2017.Count); //Se genera el índice del número de carro a selecc.
-                    carrosSeleccionados.Add(Carros2017[carroSeleccionado]); //Se añade el índice del carro
-                    Carros2017.RemoveAt(carroSeleccionado); //Se borra
+                    if (c2 < 1)
+                    {
+                        carroSeleccionado = random.Next(0, Carros2017.Count); //Se genera el índice del número de carro a selecc.
+                        carrosSeleccionados.Add(Carros2017[carroSeleccionado]); //Se añade el índice del carro
+                        Carros2017.RemoveAt(carroSeleccionado); //Se borra
+                        c2++;
+                    }
                     break;
                 case 3:
-                    carroSeleccionado = random.Next(0, Carros2018.Count); //Se genera el índice del número de carro a selecc.
-                    carrosSeleccionados.Add(Carros2018[carroSeleccionado]); //Se añade el índice del carro
-                    Carros2018.RemoveAt(carroSeleccionado); //Se borra
+                    if (c3 < 6)
+                    {
+                        carroSeleccionado = random.Next(0, Carros2018.Count); //Se genera el índice del número de carro a selecc.
+                        carrosSeleccionados.Add(Carros2018[carroSeleccionado]); //Se añade el índice del carro
+                        Carros2018.RemoveAt(carroSeleccionado); //Se borra
+                        c3++;
+                    }
                     break;
                 case 4:
-                    carroSeleccionado = random.Next(0, Carros2019.Count); //Se genera el índice del número de carro a selecc.
-                    carrosSeleccionados.Add(Carros2019[carroSeleccionado]); //Se añade el índice del carro
-                    Carros2019.RemoveAt(carroSeleccionado); //Se borra
+                    if (c4 < 2)
+                    {
+                        carroSeleccionado = random.Next(0, Carros2019.Count); //Se genera el índice del número de carro a selecc.
+                        carrosSeleccionados.Add(Carros2019[carroSeleccionado]); //Se añade el índice del carro
+                        Carros2019.RemoveAt(carroSeleccionado); //Se borra
+                        c4++;
+                    }
                     break;
                 case 5:
-                    carroSeleccionado = random.Next(0, Carros2020.Count); //Se genera el índice del número de carro a selecc.
-                    carrosSeleccionados.Add(Carros2020[carroSeleccionado]); //Se añade el índice del carro
-                    Carros2020.RemoveAt(carroSeleccionado); //Se borra
+                    if (c5 < 7)
+                    {
+                        carroSeleccionado = random.Next(0, Carros2020.Count); //Se genera el índice del número de carro a selecc.
+                        carrosSeleccionados.Add(Carros2020[carroSeleccionado]); //Se añade el índice del carro
+                        Carros2020.RemoveAt(carroSeleccionado); //Se borra
+                        c5++;
+                    }
                     break;
                 case 6:
-                    carroSeleccionado = random.Next(0, Carros2021.Count); //Se genera el índice del número de carro a selecc.
-                    carrosSeleccionados.Add(Carros2021[carroSeleccionado]); //Se añade el índice del carro
-                    Carros2021.RemoveAt(carroSeleccionado); //Se borra
+                    if (c6 < 1)
+                    {
+                        carroSeleccionado = random.Next(0, Carros2021.Count); //Se genera el índice del número de carro a selecc.
+                        carrosSeleccionados.Add(Carros2021[carroSeleccionado]); //Se añade el índice del carro
+                        Carros2021.RemoveAt(carroSeleccionado); //Se borra
+                        c6++;
+                    }
                     break;
 
             }
@@ -129,7 +154,7 @@ namespace probabildiadCalculadorCarros
 
         public static void Ejecutar()
         {
-            while (carrosSeleccionados.Count != 30)
+            while (carrosSeleccionados.Count != 24)
             {
                 SeleccionarCarro();
             }
