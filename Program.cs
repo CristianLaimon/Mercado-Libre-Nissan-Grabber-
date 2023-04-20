@@ -1,4 +1,5 @@
-﻿using System;
+﻿using probabildiadCalculadorCarros;
+using System;
 
 namespace Program
 {
@@ -6,7 +7,9 @@ namespace Program
     {
         static void Main(string[] args)
         {
-
+            Carros.RellenarListas();
+            Carros.SeleccionarCarrosPorDefecto();
+            Carros.Ejecutar();
         }
     }
 }
