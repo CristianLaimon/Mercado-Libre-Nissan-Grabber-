@@ -27,7 +27,7 @@ namespace probabildiadCalculadorCarros
         public static List<Carro> Carros2020 { get => carros2020; set => carros2020 = value; }
         public static List<Carro> Carros2021 { get => carros2021; set => carros2021 = value; }
 
-        public static void RellenarListas()
+        public static void RellenarListas() //aquí se cambia el número de carros 1/2
         {
             for(int i = 0; i < 40; i++) 
             {
@@ -62,7 +62,7 @@ namespace probabildiadCalculadorCarros
 
         public static void SeleccionarCarrosPorDefecto()
         {
-            int a16 = random.Next(0, 41);
+            int a16 = random.Next(0, 41); //Aquí se cambia el número de carros 2/2
             int a17 = random.Next(0, 52);
             int a18 = random.Next(0, 136);
             int a19 = random.Next(0, 57);
@@ -84,7 +84,7 @@ namespace probabildiadCalculadorCarros
             Carros2021.RemoveAt(a21);
         }
 
-        public static string SeleccionarCarro()
+        public static void SeleccionarCarro()
         {
             
             int candidato = random.Next(1, 7);
@@ -96,35 +96,34 @@ namespace probabildiadCalculadorCarros
                     carroSeleccionado = random.Next(0, Carros2016.Count); //Se genera el índice del número de carro a selecc.
                     carrosSeleccionados.Add(Carros2016[carroSeleccionado]); //Se añade el índice del carro
                     Carros2016.RemoveAt(carroSeleccionado); //Se borra
-                    return "2016" + "    " + carroSeleccionado;
+                    break;
 
-                default:
-                    return "no hay nada";
-                //case 2:
-                //    carroSeleccionado = random.Next(carros2017.Count);
-                //    carrosSeleccionados.Add(carros2017[carroSeleccionado]);
-                //    carros2017.Remove(carroSeleccionado);
-                //    break;
-                //case 3:
-                //    carroSeleccionado = random.Next(1, carros2018.Count);
-                //    carrosSeleccionados.Add(carros2018[carroSeleccionado]);
-                //    carros2018.Remove(carroSeleccionado);
-                //    break;
-                //case 4:
-                //    carroSeleccionado = random.Next(1, carros2019.Count);
-                //    carrosSeleccionados.Add(carros2019[carroSeleccionado]);
-                //    carros2019.Remove(carroSeleccionado);
-                //    break;
-                //case 5:
-                //    carroSeleccionado = random.Next(1, carros2020.Count);
-                //    carrosSeleccionados.Add(carros2020[carroSeleccionado]);
-                //    carros2020.Remove(carroSeleccionado);
-                //    break;
-                //case 6:
-                //    carroSeleccionado = random.Next(1, carros2021.Count);
-                //    carrosSeleccionados.Add(carros2021[carroSeleccionado]);
-                //    carros2021.Remove(carroSeleccionado);
-                //    break;
+                case 2:
+                    carroSeleccionado = random.Next(0, Carros2017.Count); //Se genera el índice del número de carro a selecc.
+                    carrosSeleccionados.Add(Carros2017[carroSeleccionado]); //Se añade el índice del carro
+                    Carros2017.RemoveAt(carroSeleccionado); //Se borra
+                    break;
+                case 3:
+                    carroSeleccionado = random.Next(0, Carros2018.Count); //Se genera el índice del número de carro a selecc.
+                    carrosSeleccionados.Add(Carros2018[carroSeleccionado]); //Se añade el índice del carro
+                    Carros2018.RemoveAt(carroSeleccionado); //Se borra
+                    break;
+                case 4:
+                    carroSeleccionado = random.Next(0, Carros2019.Count); //Se genera el índice del número de carro a selecc.
+                    carrosSeleccionados.Add(Carros2019[carroSeleccionado]); //Se añade el índice del carro
+                    Carros2019.RemoveAt(carroSeleccionado); //Se borra
+                    break;
+                case 5:
+                    carroSeleccionado = random.Next(0, Carros2020.Count); //Se genera el índice del número de carro a selecc.
+                    carrosSeleccionados.Add(Carros2020[carroSeleccionado]); //Se añade el índice del carro
+                    Carros2020.RemoveAt(carroSeleccionado); //Se borra
+                    break;
+                case 6:
+                    carroSeleccionado = random.Next(0, Carros2021.Count); //Se genera el índice del número de carro a selecc.
+                    carrosSeleccionados.Add(Carros2021[carroSeleccionado]); //Se añade el índice del carro
+                    Carros2021.RemoveAt(carroSeleccionado); //Se borra
+                    break;
+
             }
         }
 
