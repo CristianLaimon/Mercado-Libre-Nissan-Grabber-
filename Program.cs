@@ -7,9 +7,9 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            Carros.RellenarListas();
-            Carros.SeleccionarCarrosPorDefecto();
-            Carros.Ejecutar();
+            CarrosManager.RellenarListas();
+            CarrosManager.SeleccionarCarrosPorDefecto();
+            CarrosManager.Ejecutar();
         }
     }
 }
