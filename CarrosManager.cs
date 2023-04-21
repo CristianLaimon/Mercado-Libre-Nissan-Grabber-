@@ -106,8 +106,7 @@ namespace probabildiadCalculadorCarros
 
         public static void SeleccionarCarrosPorDefecto()
         {
-            //Por alguna razón que nunca voy a entender a veces se sale del rango aunque eso no debería de pasar
-            //asi que mejor les puse que sí fuera el numero de carros (en lugar que sea "n + 1", ahora solo es "n")
+
             int a12 = random.Next(0, 5);
             int a13 = random.Next(0, 6);
             int a14 = random.Next(0, 8);
