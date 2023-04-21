@@ -106,18 +106,20 @@ namespace probabildiadCalculadorCarros
 
         public static void SeleccionarCarrosPorDefecto()
         {
-            int a12 = random.Next(0, 6);
-            int a13 = random.Next(0, 7);
-            int a14 = random.Next(0, 9);
-            int a15 = random.Next(0, 23);
-            int a16 = random.Next(0, 41); //Aquí se cambia el número de carros 2/2
-            int a17 = random.Next(0, 51);
-            int a18 = random.Next(0, 136);
-            int a19 = random.Next(0, 57);
-            int a20 = random.Next(0, 150);
-            int a21 = random.Next(0, 44);
-            int a22 = random.Next(0, 27);
-            int a23 = random.Next(0, 4);
+            //Por alguna razón que nunca voy a entender a veces se sale del rango aunque eso no debería de pasar
+            //asi que mejor les puse que sí fuera el numero de carros (en lugar que sea "n + 1", ahora solo es "n")
+            int a12 = random.Next(0, 5);
+            int a13 = random.Next(0, 6);
+            int a14 = random.Next(0, 8);
+            int a15 = random.Next(0, 22);
+            int a16 = random.Next(0, 40); //Aquí se cambia el número de carros 2/2
+            int a17 = random.Next(0, 50);
+            int a18 = random.Next(0, 135);
+            int a19 = random.Next(0, 56);
+            int a20 = random.Next(0, 149);
+            int a21 = random.Next(0, 43);
+            int a22 = random.Next(0, 26);
+            int a23 = random.Next(0, 3);
 
             carrosSeleccionados.Add(Carros2012[a12]);
             carrosSeleccionados.Add(Carros2013[a13]);
@@ -132,10 +134,10 @@ namespace probabildiadCalculadorCarros
             carrosSeleccionados.Add(Carros2022[a22]);
             carrosSeleccionados.Add(Carros2023[a23]);
 
-            Carros2012.RemoveAt(a16);
-            Carros2013.RemoveAt(a16);
-            Carros2014.RemoveAt(a16);
-            Carros2015.RemoveAt(a16);
+            Carros2012.RemoveAt(a12);
+            Carros2013.RemoveAt(a13);
+            Carros2014.RemoveAt(a14);
+            Carros2015.RemoveAt(a15);
             Carros2016.RemoveAt(a16);
             Carros2017.RemoveAt(a17);
             Carros2018.RemoveAt(a18);
