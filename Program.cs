@@ -7,6 +7,8 @@ namespace Program
     {
         static void Main(string[] args)
         {
+            test.Algo();
+
             CarrosManager.RellenarListas();
             CarrosManager.SeleccionarCarrosPorDefecto();
             CarrosManager.Ejecutar();
